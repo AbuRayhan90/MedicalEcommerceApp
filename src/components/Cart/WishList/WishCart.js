@@ -8,6 +8,7 @@ import ButtonYello from "../../Button/ButtonYello";
 const WishCart = () => {
   const { addToCart, wishItem, removeToWishList } = useContext(CartContext);
   const history = useHistory();
+  console.log(wishItem.length);
 
   return (
     <div>
@@ -15,7 +16,7 @@ const WishCart = () => {
       <CartRight />
       <div className="container mx-auto pb-28 pt-8">
         <h1 className="text-4xl font-blod text-blue-800 mb-10">
-          Wishlist{" "}
+          Wishlist
           <sup className="text-xl ">
             ({wishItem.length >= 0 && wishItem.length})
           </sup>

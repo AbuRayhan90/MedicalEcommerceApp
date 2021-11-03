@@ -7,3 +7,4 @@ export const INCREMENT = "INCREMENT";
 export const DICREMENT = "DICREMENT";
 export const CLEAR_CART = "CLEAR_CART";
 export const GET_TOTAL = "GET_TOTAL";
+export const ITEM_TOTAL = "ITEM_TOTAL";

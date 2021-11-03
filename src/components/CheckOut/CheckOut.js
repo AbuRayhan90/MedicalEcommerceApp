@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import ButtonYello from "../Button/ButtonYello";
 import Footer from "../Footer/Footer";
 import InputField from "../InputField/InputField";
-import OrderText from "../ProductText/OrderText";
+import OrderText from "./ProductText/OrderText";
 import SubCriber from "../SubCriber/SubCriber";
-
+import CartContext from "../../Context/cart/CartContext";
+import Navbar from "../Header/Navbar/Navbar";
+import { useHistory } from "react-router";
+import CheckOutText from "./CheckOutText";
 const CheckOut = () => {
+  const { cartItems, totalPrice } = useContext(CartContext);
+  const history = useHistory();
   return (
     <>
+      <Navbar />
       <div className="container mx-auto pb-28">
         <div className="px-4 sm:px-0 font-semibold text-blue-800">
           <h3 className="text-5xl  mb-4 ">Checkout</h3>
@@ -98,17 +104,36 @@ const CheckOut = () => {
 
           <div className="h-full px-10 py-6 text-blue-800 border-2 border-yellow-500 ">
             <h1 className="text-blue-800 text-2xl font-semibold">Your order</h1>
-            <OrderText text="Product" priceText="Subtotal" />
-            <OrderText text="Product Name" priceText="Price" />
-            <OrderText text="Subtotal" priceText="Price" />
-            <OrderText text="Shipping" priceText="Free shipping" />
-            <OrderText text="Total" priceText="Price" />
-            <div className="">
-              <h1>
-                I have read and agree to the website terms and conditions *
-              </h1>
-            </div>
-            <ButtonYello text="Place order" />
+            {cartItems.length === 0 ? (
+              <div className="w-56">
+                <h1 className="text-xl">You Have No item....</h1>
+                <ButtonYello
+                  text="Add To Cart"
+                  clikHandle={() => history.push("./")}
+                />
+              </div>
+            ) : (
+              <div>
+                <CheckOutText text="Product" priceText="Subtotal" />
+                {cartItems.map((item) => (
+                  <div>
+                    <OrderText item={item} totalPrice={item.price} />
+                  </div>
+                ))}
+                <CheckOutText
+                  text="Total:"
+                  priceText={totalPrice}
+                  bold="font-bold"
+                />
+                <div className="my-4">
+                  <h1>
+                    <input className="mr-2" type="radio" />I have read and agree
+                    to the website terms and conditions *
+                  </h1>
+                </div>
+                <ButtonYello text="Place order" />
+              </div>
+            )}
           </div>
         </div>
       </div>

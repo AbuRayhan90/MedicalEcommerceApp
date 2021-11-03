@@ -6,7 +6,7 @@ import ButtonBlue from "../../Button/ButtonBlue";
 import ButtonYello from "../../Button/ButtonYello";
 
 const CartRight = () => {
-  const { showCart, showHideCart, cartItems, clearCart } =
+  const { showCart, showHideCart, cartItems, clearCart, totalPrice } =
     useContext(CartContext);
   const history = useHistory();
   return (
@@ -37,9 +37,7 @@ const CartRight = () => {
             <div className="flex justify-between">
               <h1 className="text-blue-800 font-semibold ">
                 Total: $
-                <span className="text-blue-800 font-bold ">
-                  {cartItems.reduce((amount, item) => item.price + amount, 0)}
-                </span>
+                <span className="text-blue-800 font-bold ">{totalPrice}</span>
               </h1>
               <div className="">
                 <span

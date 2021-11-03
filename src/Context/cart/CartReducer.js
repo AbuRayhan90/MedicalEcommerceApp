@@ -52,7 +52,10 @@ const CartReducer = (state, action) => {
     case INCREMENT: {
       const upDateCart = state.cartItems.map((currEle) => {
         if (currEle.id === action.payload) {
-          return { ...currEle, quantity: currEle.quantity + 1 };
+          return {
+            ...currEle,
+            quantity: currEle.quantity + 1,
+          };
         }
         return currEle;
       });
@@ -62,7 +65,10 @@ const CartReducer = (state, action) => {
       const upDateCart = state.cartItems
         .map((currEle) => {
           if (currEle.id === action.payload) {
-            return { ...currEle, quantity: currEle.quantity - 1 };
+            return {
+              ...currEle,
+              quantity: currEle.quantity - 1,
+            };
           }
           return currEle;
         })
@@ -71,7 +77,19 @@ const CartReducer = (state, action) => {
         });
       return { ...state, cartItems: upDateCart };
     }
+    case GET_TOTAL: {
+      let { totalPrice } = state.cartItems.reduce(
+        (accum, curVal) => {
+          let { price, quantity } = curVal;
 
+          let upDatedPrice = price * quantity;
+          accum.totalPrice += upDatedPrice;
+          return accum;
+        },
+        { totalPrice: 0, itemTotalPrice: 0 }
+      );
+      return { ...state, totalPrice };
+    }
     default:
       return state;
   }

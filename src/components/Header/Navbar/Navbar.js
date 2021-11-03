@@ -24,7 +24,6 @@ const Navbar = () => {
           </div>
           <div className="flex w-56 gap-2 mr-8  ">
             <select
-              className=""
               id="country"
               name="country"
               autoComplete="country"

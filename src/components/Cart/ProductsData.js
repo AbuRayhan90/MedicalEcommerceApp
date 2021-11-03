@@ -12,6 +12,7 @@ export const allProducts = [
   {
     id: 1,
     price: "199.99",
+    itemTotalPrice: "199.99",
     quantity: 1,
     wishListItem: 0,
     title: "Somersung Sonic X500 Basic",
@@ -21,6 +22,7 @@ export const allProducts = [
   {
     id: 2,
     price: "60.34",
+    itemTotalPrice: "60.34",
     quantity: 1,
     wishListItem: 0,
     title: "Digital Thermometer X30-Pro",
@@ -30,6 +32,7 @@ export const allProducts = [
   {
     id: 3,
     price: "369.87",
+    itemTotalPrice: "369.87",
     quantity: 1,
     wishListItem: 0,
     title: "Oxygen concentrator m KTS-5000",
@@ -39,6 +42,7 @@ export const allProducts = [
   {
     id: 4,
     price: "77.65",
+    itemTotalPrice: "77.65",
     quantity: 1,
     wishListItem: 0,
     title: "Blood Pressure Monitor",
@@ -48,6 +52,7 @@ export const allProducts = [
   {
     id: 5,
     price: "60.99",
+    itemTotalPrice: "60.99",
     quantity: 1,
     wishListItem: 0,
     title: "Automatic blood pressure monitor",
@@ -57,6 +62,7 @@ export const allProducts = [
   {
     id: 6,
     price: "70.99",
+    itemTotalPrice: "70.99",
     quantity: 1,
     wishListItem: 0,
     title: " Blood Sugar Test Machine",
@@ -66,6 +72,7 @@ export const allProducts = [
   {
     id: 8,
     price: "299.99",
+    itemTotalPrice: "299.99",
     quantity: 1,
     wishListItem: 0,
     title: "Somersung Sonic X2000 Pro Black",
@@ -75,6 +82,7 @@ export const allProducts = [
   {
     id: 9,
     price: "53.75",
+    itemTotalPrice: "53.75",
     quantity: 1,
     wishListItem: 0,
     title: "Extractor used to  teeth",
@@ -84,6 +92,7 @@ export const allProducts = [
   {
     id: 10,
     price: "577.75",
+    itemTotalPrice: "577.75",
     quantity: 1,
     wishListItem: 1,
     title: "Extractor used to  teeth",
@@ -93,6 +102,7 @@ export const allProducts = [
   {
     id: 11,
     price: "452.75",
+    itemTotalPrice: "452.75",
     quantity: 1,
     wishListItem: 0,
     title: "Extractor used to  teeth",
@@ -102,6 +112,7 @@ export const allProducts = [
   {
     id: 12,
     price: "53.75",
+    itemTotalPrice: "53.75",
     quantity: 1,
     wishListItem: 0,
     title: "Extractor used to  teeth",
@@ -111,6 +122,7 @@ export const allProducts = [
   {
     id: 13,
     price: "350.75",
+    itemTotalPrice: "350.75",
     quantity: 1,
     wishListItem: 0,
     title: "Blue Hot Water Bottle, 2 Quart Capacity",

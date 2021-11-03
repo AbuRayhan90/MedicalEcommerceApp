@@ -8,8 +8,8 @@ import {
   ADD_TO_WISHLIST,
   REMOVE_TO_WISHLIST,
   INCREMENT,
-  GET_TOTAL,
   CLEAR_CART,
+  GET_TOTAL,
   DICREMENT,
 } from "../Types";
 
@@ -18,11 +18,10 @@ const CartState = ({ children }) => {
     showCart: false,
     cartItems: [],
     wishItem: [],
-    quantity: 0,
     totalPrice: 0,
-    totalItem: 0,
   };
 
+  const [state, dispatch] = useReducer(CartReducer, initialState);
   const addToCart = (item) => {
     dispatch({
       type: ADD_TO_CART,
@@ -70,7 +69,11 @@ const CartState = ({ children }) => {
     });
   };
 
-  const [state, dispatch] = useReducer(CartReducer, initialState);
+  useEffect(() => {
+    dispatch({
+      type: GET_TOTAL,
+    });
+  }, [state.cartItems]);
 
   return (
     <CartContext.Provider
@@ -78,6 +81,7 @@ const CartState = ({ children }) => {
         showCart: state.showCart,
         cartItems: state.cartItems,
         wishItem: state.wishItem,
+        totalPrice: state.totalPrice,
         addToCart,
         removeToCart,
         showHideCart,

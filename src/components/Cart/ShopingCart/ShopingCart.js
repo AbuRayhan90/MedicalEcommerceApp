@@ -9,10 +9,10 @@ import ButtonBlue from "../../Button/ButtonBlue";
 const ShopingCart = () => {
   const {
     cartItems,
-    totalPrice,
     removeToCart,
     incrementHandler,
     decrementHandler,
+    totalPrice,
   } = useContext(CartContext);
 
   const history = useHistory();
@@ -111,7 +111,7 @@ const ShopingCart = () => {
                         </span>
                       </td>
                       <td className="table-cell text-blue-800 font-bold">
-                        <span>$ {totalPrice}</span>
+                        <span>$ {item.itemTotalPrice * item.quantity}</span>
                       </td>
                     </tr>
                   ))}
@@ -140,8 +140,8 @@ const ShopingCart = () => {
             <div className="border-2 border-gray-200 p-6">
               <div className="text-blue-800 font-semibold ">
                 <div className="flex border-b-2 border-gray-200 pb-3">
-                  <p>{totalPrice}</p>
-                  <span className="ml-auto font-bold">$ 333</span>
+                  <p>Sub Total</p>
+                  <span className="ml-auto font-bold">$ {totalPrice}</span>
                 </div>
                 <div className="flex border-b-2 border-gray-200">
                   <p className="font-semibold text-sm py-3">
@@ -149,12 +149,15 @@ const ShopingCart = () => {
                   </p>
                 </div>
                 <div className="flex border-b-2 border-gray-200 py-3">
-                  <p>{totalPrice}</p>
-                  <span className="ml-auto font-bold">$ 333</span>
+                  <p>Total Amount :</p>
+                  <span className="ml-auto font-bold">$ {totalPrice}</span>
                 </div>
               </div>
               <div className="mt-8 text-center">
-                <ButtonYello text="Prpceed to checkout" />
+                <ButtonYello
+                  clikHandle={() => history.push("./checkout")}
+                  text="Prpceed to checkout"
+                />
               </div>
             </div>
           </div>
