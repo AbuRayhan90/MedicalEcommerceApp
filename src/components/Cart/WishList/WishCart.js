@@ -14,8 +14,8 @@ const WishCart = () => {
     <div>
       <Navbar />
       <CartRight />
-      <div className="container mx-auto pb-28 pt-8">
-        <h1 className="text-4xl font-blod text-blue-800 mb-10">
+      <div className="container mx-auto pb-28 pt-8 px-4">
+        <h1 className="lg:text-4xl text-2xl font-blod text-blue-800 mb-10">
           Wishlist
           <sup className="text-xl ">
             ({wishItem.length >= 0 && wishItem.length})
@@ -23,7 +23,7 @@ const WishCart = () => {
         </h1>
         {wishItem.length <= 0 ? (
           <div className="">
-            <h1 className="font-semibold text-4xl text-blue-800 mb-10">
+            <h1 className="font-semibold lg:text-4xl text-xl text-blue-800 lg:mb-10 mb-6">
               No Item In Your WishList.....
             </h1>
             <ButtonYello
@@ -32,21 +32,25 @@ const WishCart = () => {
             />
           </div>
         ) : (
-          <div className="flex justify-between gap-8 ">
+          <div className="lg:flex lg:justify-between lg:gap-8 ">
             <div className="w-full">
               <div className=" w-full">
                 <table className="table w-full ">
                   <thead className="table-header-group">
                     <tr className="table-row text-left text-blue-800">
-                      <th className=" table-cell ">Product</th>
-                      <th className=" table-cell">Price</th>
-                      <th className=" table-cell">Stock status</th>
+                      <th className=" table-cell text-sm md:text-md">
+                        Product
+                      </th>
+                      <th className=" table-cell text-sm md:text-md">Price</th>
+                      <th className=" table-cell text-sm md:text-md">
+                        Stock status
+                      </th>
                     </tr>
                   </thead>
 
-                  <tbody className="table-header-group   ">
+                  <tbody className="table-header-group">
                     {wishItem.map((item) => (
-                      <tr className="table-row border-gray-200 border-2">
+                      <tr className="table-row border-gray-200 border-2 text-sm md:text-md">
                         <td className="align-bottom table-cell ">
                           <div className="flex">
                             <span
@@ -55,7 +59,7 @@ const WishCart = () => {
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-"
+                                className="h-6 w-6"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -68,13 +72,13 @@ const WishCart = () => {
                                 />
                               </svg>
                             </span>
-                            <div className="">
+                            <div className="pt-4">
                               <span>
                                 <img
-                                  className="w-20"
+                                  className="w-28"
                                   height="14"
                                   src={item.image}
-                                  alt=""
+                                  alt="product"
                                 />
                               </span>
                             </div>
@@ -91,12 +95,12 @@ const WishCart = () => {
                         <td className="table-cell text-blue-800 font-bold">
                           <span>$ {item.price}</span>
                         </td>
-                        <td className=" table-cell">
-                          <span className="text-green-500 font-bold">
+                        <td className="table-cell">
+                          <span className="text-green-500 font-bold text-sm md:text-md">
                             In Stock
                           </span>
                         </td>
-                        <td className="table-cell text-blue-800 font-bold">
+                        <td className="table-cell text-blue-800 font-bold w-28 md:w-auto">
                           <ButtonYello
                             clikHandle={() => addToCart(item)}
                             text="Add To Cart"

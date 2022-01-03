@@ -9,7 +9,7 @@ const CounDown = () => {
   useEffect(() => {
     let interval;
     const startTimer = () => {
-      const counDownDate = new Date("October 30, 2021").getTime();
+      const counDownDate = new Date("February 20, 2022").getTime();
 
       interval = setInterval(() => {
         const now = new Date().getTime();

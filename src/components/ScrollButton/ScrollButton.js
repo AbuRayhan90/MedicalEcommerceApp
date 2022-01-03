@@ -5,9 +5,9 @@ const ScrollButton = () => {
   return (
     <button
       onClick={() => scroll.scrollToTop()}
-      className="bg-gray-400 py-4 px-6 fixed bottom-10 right-10 rounded-full opacity-50"
+      className="lg:bg-gray-400 bg-black  h-10 w-10 fixed lg:bottom-10 bottom-14 lg:right-10 right-4 rounded-full opacity-50"
     >
-      <i class="fas fa-long-arrow-alt-up text-white text-2xl"></i>
+      <i class="fas fa-long-arrow-alt-up text-white lg:text-xl text-md"></i>
     </button>
   );
 };

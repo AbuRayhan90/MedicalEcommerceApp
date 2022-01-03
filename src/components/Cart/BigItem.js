@@ -7,11 +7,11 @@ const BigItem = () => {
   const bigProduct = allProducts.find((item) => item);
 
   return (
-    <div>
+    <div className="">
       <h1 className="font-semibold text-3xl text-blue-800 mb-8 mt-8 ">
         This week deal
       </h1>
-      <div className="text-blue-800 border-solid border-4  border-yellow-500 h-5/6 w-full ">
+      <div className="text-blue-800 border-solid border-4  border-yellow-500 lg:h-5/6  w-full ">
         <div className="">
           <CounDown />
           <div className="relative ">

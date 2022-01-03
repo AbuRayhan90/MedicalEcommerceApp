@@ -71,11 +71,7 @@ const ultsData = {
       id: 2,
       title: "PowerSteel X-tra 200 Brush",
       des: "Only in this week. Don't misss!",
-      button: (
-        <button className="bg-yellow-500 font-semibold  text-white px-7 py-2 rounded-3xl transition duration-500 hover:bg-white hover:text-blue-800 ">
-          Add to cart
-        </button>
-      ),
+      button: <ButtonYello text="Add to cart" />,
       only: false,
       price: "$ 29.99",
       discount: "$15.99",

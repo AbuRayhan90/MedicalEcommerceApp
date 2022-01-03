@@ -12,7 +12,7 @@ const CartRight = () => {
   return (
     <>
       {showCart && (
-        <div className="w-1/4 right-0  z-20 bg-white px-6  absolute">
+        <div className="lg:w-1/4 w-full fixed md:flex right-0  z-10 bg-white px-6 h-full">
           <div className="">
             <i
               className="fa fa-time-circle"

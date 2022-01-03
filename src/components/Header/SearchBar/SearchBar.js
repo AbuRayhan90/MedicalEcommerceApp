@@ -1,18 +1,22 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({ setSearchBar, searchBar }) {
   return (
-    <div className="flex flex-wrap bg-gray-300  p-2 px-4 rounded-3xl overflow-hidden ">
-      <div className="">
+    <div className="md:flex md:flex-wrap  md:bg-gray-300  md:p-2 md:px-4 md:rounded-3xl overflow-hidden ">
+      <div className="hidden md:flex md:relative ">
         <input
           className="focus:outline-none bg-gray-300 placeholder-blue-800 font-bold "
           placeholder="Search fro products "
         />
       </div>
-      <button className="text-blue-800 ">
+
+      <button
+        className="text-blue-800 relative"
+        onClick={() => setSearchBar(!searchBar)}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 font-bold"
+          className="h-5 w-5 "
           viewBox="0 0 20 20"
           fill="currentColor"
         >

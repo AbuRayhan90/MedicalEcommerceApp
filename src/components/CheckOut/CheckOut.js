@@ -14,9 +14,9 @@ const CheckOut = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto pb-28">
+      <div className="container mx-auto md:pb-28 my-6 px-4 md:px-0">
         <div className="px-4 sm:px-0 font-semibold text-blue-800">
-          <h3 className="text-5xl  mb-4 ">Checkout</h3>
+          <h3 className="md:text-5xl text-3xl  mb-4 ">Checkout</h3>
           <p className="text-sm text-gray-800 ">
             Returning customer?
             <span className="text-blue-800 cursor-pointer">
@@ -31,7 +31,7 @@ const CheckOut = () => {
             </span>
           </p>
         </div>
-        <div className="flex gap-12  justify-between">
+        <div className="md:flex gap-12  justify-between space-y-3">
           <div className="w-full border-gray-200 border-2 py-10 px-10">
             <form action="#" method="Payment">
               <div className="">

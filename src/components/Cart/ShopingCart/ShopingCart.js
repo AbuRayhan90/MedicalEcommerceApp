@@ -20,29 +20,28 @@ const ShopingCart = () => {
     <div>
       <Navbar />
       <CartRight />
-      <div className="container mx-auto pb-28">
-        <h1 className="text-6xl font-blod text-blue-800 mb-10">
+      <div className="container mx-auto pb-28 px-4 md:px-0">
+        <h1 className="lg:text-6xl text-3xl font-blod text-blue-800 mb-10">
           Shopping cart{" "}
-          <span className="text-xl ">
+          <span className="lg:text-xl text-sm ">
             ({cartItems.length >= 0 && cartItems.length})
           </span>
         </h1>
-        <div className="flex justify-between gap-8 ">
+        <div className="lg:flex lg:justify-between lg:gap-8 ">
           <div className="w-full">
-            <div className=" w-full">
-              <table className="table w-full ">
+            <div className="w-full">
+              <table className="table w-full">
                 <thead className="table-header-group">
                   <tr className="table-row text-left text-blue-800">
-                    <th className=" table-cell ">Product</th>
-                    <th className=" table-cell">Price</th>
-                    <th className=" table-cell">Quantity</th>
-                    <th className=" table-cell">Total</th>
+                    <th className=" table-cell text-sm md:text-md">Product</th>
+                    <th className=" table-cell text-sm md:text-md">Price</th>
+                    <th className=" table-cell text-sm md:text-md">Quantity</th>
+                    <th className=" table-cell text-sm md:text-md">Total</th>
                   </tr>
                 </thead>
-
-                <tbody className="table-header-group  ">
+                <tbody className="table-header-group">
                   {cartItems.map((item) => (
-                    <tr className="table-row border-gray-200 border-2 ">
+                    <tr className="table-row border-gray-200 border-2 text-sm md:text-md">
                       <td className="align-bottom table-cell ">
                         <div className="flex">
                           <span
@@ -52,7 +51,7 @@ const ShopingCart = () => {
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-6 w-"
+                              className="h-6 w-6"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -65,10 +64,10 @@ const ShopingCart = () => {
                               />
                             </svg>
                           </span>
-                          <div className="">
+                          <div className="pt-4 md:pt-0">
                             <span className="cursor-pointer">
                               <img
-                                className="w-20"
+                                className="w-28 md:w-20"
                                 height="14"
                                 src={item.image}
                                 alt=""
@@ -118,24 +117,28 @@ const ShopingCart = () => {
                 </tbody>
               </table>
             </div>
-            <div className="flex flex-wrap mt-14">
+            <div className="md:flex md:flex-wrap md:mt-14 mt-6">
               <ButtonYello
                 clikHandle={() => history.push("./")}
                 text="Back to shop"
               />
-              <div className="ml-auto">
+              <div className="md:ml-auto mt-6 md:mt-0">
                 <input
-                  className="focus:outline-none bg-gray-200  px-14 py-2 rounded-3xl "
+                  className="focus:outline-none w-full mb-4 md:mb-0   bg-gray-200  px-14 py-2 rounded-3xl "
                   placeholder="Enter your coupon"
                 />
-                <ButtonBlue text="Apply" />
+                <div className="text-right">
+                  <ButtonBlue text="Apply" />
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-2/4">
+          <div className="lg:w-2/4 w-full ">
             <div className="">
-              <h1 className="text-blue-800 font-semibold">Cart Toatal</h1>
+              <h1 className="text-blue-800 text-2xl mb-4 font-semibold">
+                Cart Toatal
+              </h1>
             </div>
             <div className="border-2 border-gray-200 p-6">
               <div className="text-blue-800 font-semibold ">

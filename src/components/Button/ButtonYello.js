@@ -4,7 +4,7 @@ const ButtonYello = ({ text, clikHandle }) => {
   return (
     <button
       onClick={clikHandle}
-      className="bg-yellow-500 font-semibold  text-white px-7 py-2 rounded-3xl hover:bg-blue-800 transition duration-500"
+      className="bg-yellow-500 lg:font-semibold text-sm font-normal  text-white lg:px-7 px-4 lg:py-2 py-1 rounded-3xl hover:bg-blue-800 transition duration-500"
     >
       {text}
     </button>

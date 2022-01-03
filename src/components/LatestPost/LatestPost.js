@@ -7,9 +7,9 @@ const LatestPost = () => {
       <h1 className="font-semibold text-5xl text-center text-blue-800 mb-8 mt-8">
         Latest offers
       </h1>
-      <div className="flex flex-wrap w-full  gap-x-14">
+      <div className="flex flex-wrap w-full  lg:gap-x-14 gap-y-4 lg:gap-y-0">
         {ultsData.latestPost.map((post) => (
-          <div className="w-96 relative">
+          <div className="lg:w-96 w-full relative">
             <img
               className="w-full h-64 transition transform duration-1000 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer "
               src={post.image}
