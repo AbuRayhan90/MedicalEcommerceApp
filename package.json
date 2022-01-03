@@ -1,7 +1,7 @@
 {
   "name": "e-commerce-app",
   "version": "0.1.0",
-  "homepage": " https://aburayhan90.github.io/MedicalEcommerceApp/",
+  "homepage": "https://aburayhan90.github.io/MedicalEcommerceApp/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
@@ -24,12 +24,12 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
